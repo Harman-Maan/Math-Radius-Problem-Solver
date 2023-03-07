@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background: linear-gradient(to left top, #383838b3, #000000bd), url("bg.jpg") no-repeat center center / cover;
+  color: #fff;
+  padding: 20px;
+}
+
+#input {
+  width: 400px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#input #radius-value {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+#input #radius-value:focus {
+  outline: none;
+}
+
+.value-of-pie {
+  padding: 20px 10px;
+}
+
+.value-of-pie input {
+  margin: 10px 0;
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+#input #submit {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+}
+
+#input #submit:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#Radius,
+#Circle,
+#Semicircle,
+#Sphere,
+#Hemisphere,
+#Thanks {
+  border: #ffffff;
+  padding: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(2, 1, 1);
+  line-height: 20px;
+  width: 400px;
+  transition: 500ms;
+}
+
+#Radius {
+  background: linear-gradient(to left, #eeff00a5, #05f7ffa1);
+}
+
+#Circle {
+  background: linear-gradient(to right, #05e2ff9f, #5eff009f);
+}
+
+#Semicircle {
+  background: linear-gradient(to left, #5eff008f, #0569ff9a);
+}
+
+#Sphere {
+  background: linear-gradient(to right, #0569ff94, #d400ffa1);
+}
+
+#Hemisphere {
+  background: linear-gradient(to left, #7700ffa8, #ff05c9a1);
+}
+
+#Thanks {
+  padding: 0px 0px 20px 0px;
+  background: linear-gradient(to right, #ff051a9f, #6f00ffa1);
+}
+
+@media (max-width: 440px) {
+  body {
+    padding: 10px;
+  }
+  #input #radius-value,
+  #Radius,
+  #Circle,
+  #Semicircle,
+  #Sphere,
+  #Hemisphere,
+  #Thanks {
+    width: 300px;
+  }
+
+  #input #submit {
+    align-self: center;
+  }
+}
+
+@media (max-width: 300px) {
+  body {
+    padding: 5px;
+  }
+  #input #radius-value,
+  #Radius,
+  #Circle,
+  #Semicircle,
+  #Sphere,
+  #Hemisphere,
+  #Thanks {
+    width: 200px;
+  }
+}

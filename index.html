@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Circle Formula</title>
+  </head>
+
+  <body>
+    <div id="input">
+      <label for="radius"> Radius: <br /><input placeholder="Type in the radius" type="number" min="1" name="radius" id="radius-value" /> </label>
+      <div class="value-of-pie">
+        <p>Select which value of pie shall be used:</p>
+        <label for="value-of-pie">
+          <input type="radio" value="3.14" name="value-of-pie" />
+          3.14
+          <br />
+          <input type="radio" value="22/7" name="value-of-pie" />
+          22/7
+        </label>
+      </div>
+      <button id="submit" onclick="solve()">Submit</button>
+    </div>
+    <div class="grid">
+      <div id="Radius"></div>
+      <div id="Circle"></div>
+      <div id="Semicircle"></div>
+      <div id="Sphere"></div>
+      <div id="Hemisphere"></div>
+      <div id="Thanks"></div>
+    </div>
+    <script src="script.js" defer type="text/javascript"></script>
+  </body>
+</html>
