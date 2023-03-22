@@ -17,6 +17,39 @@ body {
   padding: 20px;
 }
 
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+  background: #333;
+  padding: 0.5rem;
+}
+
+.navbar h2 {
+  font-size: 1.8rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar ul a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.navbar ul a:hover {
+  color: #fff;
+}
+
 #input {
   width: 400px;
   font-size: 1.2rem;
@@ -129,6 +162,12 @@ body {
 
   #input #submit {
     align-self: center;
+  }
+}
+
+@media (max-width: 885px) {
+  body {
+    margin-top: 4rem;
   }
 }
 

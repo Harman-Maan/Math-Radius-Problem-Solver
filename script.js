@@ -3,20 +3,17 @@ const circle = document.getElementById("Circle");
 const semicircle = document.getElementById("Semicircle");
 const sphere = document.getElementById("Sphere");
 const hemisphere = document.getElementById("Hemisphere");
-const Thanks = document.getElementById("Thanks");
+const thanks = document.getElementById("Thanks");
 
 let decimalPlaces = 2;
 
 function solve() {
   // Collectng the values
   const valueOfRadius = document.getElementById("radius-value").value;
-  const valueOfPie = document.querySelector('input[name="value-of-pie"]:checked').value;
 
   // Assigning values to r and p so that it is easier to read formulas
   let r = valueOfRadius;
-  let p;
-  if (valueOfPie == "22/7") p = 22 / 7;
-  else p = valueOfPie;
+  let p = Math.PI;
 
   // Circle
   let circleCurcumference = (2 * p * r).toFixed(decimalPlaces);
@@ -35,7 +32,7 @@ function solve() {
   let hemisphereCurvedArea = (2 * p * r ** 2).toFixed(decimalPlaces);
   let hemisphereTotalSurfaceArea = (3 * p * r ** 2).toFixed(decimalPlaces);
 
-  radius.innerHTML = "Radius is " + valueOfRadius + "<br>" + "(Value Pie is taken " + valueOfPie + ")";
+  radius.innerHTML = "Radius: " + valueOfRadius;
   circle.innerHTML = "<br><h3>Circle</h3>" + "<br>Circumference : " + circleCurcumference + "<br>Area : " + circleArea;
   semicircle.innerHTML = "<br><h3>Semi-Circle</h3>" + "<br>Perimeter : " + semicirclePerimeter + "<br>Area : " + semicircleArea;
   sphere.innerHTML = "<br><h3>Sphere</h3> " + "<br>Volume : " + sphereVolume + "<br>Surface Area : " + sphereSurfaceArea;
@@ -47,5 +44,5 @@ function solve() {
     hemisphereCurvedArea +
     "<br>Total Surface Area : " +
     hemisphereTotalSurfaceArea;
-  Thanks.innerHTML = "<br>Thanks for using";
+  thanks.innerHTML = "<br>Thanks for using";
 }
