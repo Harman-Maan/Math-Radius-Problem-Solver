@@ -7,6 +7,12 @@ const thanks = document.getElementById("Thanks");
 
 let decimalPlaces = 2;
 
+document.getElementById("radius-value").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    solve();
+  }
+});
+
 function solve() {
   // Collectng the values
   const valueOfRadius = document.getElementById("radius-value").value;
@@ -45,4 +51,6 @@ function solve() {
     "<br>Total Surface Area : " +
     hemisphereTotalSurfaceArea;
   thanks.innerHTML = "<br>Thanks for using";
+
+  document.getElementById("radius-value").value = "";
 }

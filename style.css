@@ -5,27 +5,20 @@
 }
 
 body {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: space-around;
   min-height: 100vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background: linear-gradient(to left top, #383838b3, #000000bd), url("bg.jpg") no-repeat center center / cover;
   color: #fff;
-  padding: 20px;
 }
 
 .navbar {
+  position: relative;
   width: 100%;
-  position: fixed;
   top: 0;
   z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
   background: #333;
   padding: 0.5rem;
 }
@@ -50,12 +43,26 @@ body {
   color: #fff;
 }
 
+.navbar ul a img {
+  height: 1.4rem;
+  width: 1.4rem;
+  margin: auto 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  min-height: 90vh;
+  width: 100%;
+  padding: 1rem;
+}
+
 #input {
   width: 400px;
   font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin: auto 0;
 }
 
 #input #radius-value {
@@ -147,9 +154,6 @@ body {
 }
 
 @media (max-width: 440px) {
-  body {
-    padding: 10px;
-  }
   #input #radius-value,
   #Radius,
   #Circle,
@@ -165,16 +169,7 @@ body {
   }
 }
 
-@media (max-width: 885px) {
-  body {
-    margin-top: 4rem;
-  }
-}
-
 @media (max-width: 300px) {
-  body {
-    padding: 5px;
-  }
   #input #radius-value,
   #Radius,
   #Circle,
